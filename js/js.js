@@ -1,6 +1,5 @@
 function start() { // Inicio da fun��o start()
-
-    $("#inicio").hide();
+    $( "#inicio" ).hide("scale");
 
     $("#fundoGame").append("<div id='jogador' class='anima1'></div>");
     $("#fundoGame").append("<div id='inimigo1' class='anima2'></div>");
@@ -22,7 +21,7 @@ var posicaoY = parseInt(Math.random() * 334);
 var TECLA = {
 	W: 87,
 	S: 83,
-	D: 68
+	SPACE: 32
 	}
 
 	jogo.pressionou = [];
@@ -50,7 +49,6 @@ function loop() {
     moveinimigo1();
     moveinimigo2();
     moveamigo();
-    disparo();
     colisao();
 
 } // Fim da fun��o loop()
@@ -87,9 +85,10 @@ function movejogador() {
         }
     }
 
-    if (jogo.pressionou[TECLA.D]) {
+    if (jogo.pressionou[TECLA.SPACE]) {
 
         //Chama fun��o Disparo	
+        disparo();
     }
 
 } // fim da fun��o movejogador()

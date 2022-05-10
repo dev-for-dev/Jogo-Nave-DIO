@@ -21,7 +21,9 @@ body {
 	margin-right:auto;
 }
 
-
+#clicou{
+	color: red;
+}
 #fundoGame {
 	width:950px;
 	height:630px;
